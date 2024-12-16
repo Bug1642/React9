@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            Promise.resolve('This is a Good value')
+            .then(message => message +'!')
+            .then(BetterMessage => Promise.reject('Intentionally Failing'))
+            .then(FinalMessage =>console.log(FinalMessage))
+            .catch(err =>console.log(err));
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
